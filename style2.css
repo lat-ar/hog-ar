@@ -1,0 +1,187 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* Incluye padding y bordes en el tamaño */
+    /* Aplicamos la imagen de fondo y el color en capas separadas */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+        url('/Assets/fondoDepa.webp');
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita repeticiones */
+    background-attachment: fixed; /* Fija la imagen para evitar desplazamientos */
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* Asegura que el contenido siempre llene el viewport */
+    overflow-y: auto; /* Permite desplazamiento vertical */
+    overflow-x: hidden; /* Evita desplazamiento horizontal */
+    box-sizing: border-box; /* Incluye bordes y padding en el tamaño */
+}
+
+/* Contenedor del contenido */
+.container {
+    flex: 1; /* Permite que el contenedor crezca para llenar el espacio disponible */
+    display: flex; /* Configura el contenedor como flexbox */
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: 100%; /* Ocupa todo el ancho */
+    padding-top: 20px; /* Elimina padding adicional */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+h1 {
+    font-size: 11vw;
+    font-family: "Red Hat Display", serif;
+    margin-left: 10px;
+    color: black;
+    margin-bottom: 20px;
+    padding: 0px;
+}
+@media (min-width: 800px) {
+    h1 {
+        font-size: 48px; /* Tamaño fijo para pantallas grandes */
+    }
+}
+.instruction {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los elementos */
+    margin-bottom: 40px;
+}
+
+.instruction-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten si hay desbordamiento */
+}
+
+.icon, .icon2, .icon3 {
+    width: 40px; /* Ajusta el tamaño del icono según sea necesario */
+    height: 40px; /* Ajusta el tamaño del icono según sea necesario */
+    margin-right: 30px; /* Espacio entre el icono y el texto */
+    margin-left: 10px;
+    background-color: black; /* Fondo negro */
+    border-radius: 10px; /* Esquinas redondeadas de 20px */
+    padding: 5px; /* Espacio interno */
+}
+
+.instruction-text {
+    font-size: 20px;
+    font-family: "Red Hat Display", serif;
+    text-align: left;
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+}
+model-viewer {
+    width: 100%;
+    height: 420px;
+    top: 0px;
+    bottom: 0px;
+    margin-top: 0%;
+    background-color: transparent;
+    border-radius: 40px;
+    padding-top: 0px;
+    padding: 0%;
+    margin: 0%;
+    --poster-color: transparent;
+    z-index: 30;
+  }
+  
+  #ar-button {
+    background-image: url(/Assets/arIconBlanco.png);
+    background-repeat: no-repeat;
+    background-size: 17px 17px;
+    transition: background-color 0.5s ease;
+    background-position: 198px center;
+    background-color: rgba(0, 0, 0, 1);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+    width: 240px;
+    height: 53px;
+    font-family: "Red Hat Display", serif;
+    font-size: 14.5px;
+    font-weight: normal;
+    color: rgba(241, 241, 241, 1);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    line-height: normal;
+    border-radius: 50px;
+    border: 0px solid #4754c8;
+    z-index: 1;
+  }
+  #ar-button:active {
+    transform: translate(-50%, 2px) scale(0.95); /* Efecto de hundimiento */
+    box-shadow: 0px 3px 10px rgba(71, 84, 200, 0.5); /* Reduce la sombra para simular presión */
+  }
+  .title {
+    font-size: 14px;
+    font-family: "Red Hat Display", serif;
+    font-weight: normal;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    display: none;
+    color: #010101;
+  }
+  .subtitle {
+    font-size: 14px;
+    font-family: "Red Hat Display", serif;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: none;
+    color: #f1f1f1;
+  }
+  .logo {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    width: 130px;
+    justify-self: center;
+    display: none;
+  }
+  
+  @media (min-width: 800px) {
+    .logo {
+      display: block;
+    }
+    .title {
+      display: block;
+    }
+    .subtitle {
+      display: block;
+    }
+  }
+  .login {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 0px;
+    background-color: transparent; /* Fondo blanco semitransparente */
+  }
+  .login a {
+    width: 100%;
+    text-decoration: none;
+    display: grid;
+    place-items: center;
+    margin-top: 0;
+  }
+  .form-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 150px;
+    justify-items: center;
+  }
+  
+  .form-container img {
+    border-radius: 10px;
+  }
+  h3 {
+    text-align: center;
+    
+  }

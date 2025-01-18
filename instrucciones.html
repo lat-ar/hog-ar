@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones AR Experience</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+      rel="icon"
+      type="image/png"
+      href="/Assets/logoLatar.webp"
+    />
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<script
+      src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
+      defer
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Instrucciones</h1>
+        <div class="instruction">
+            <div class="instruction-item">
+                <img src="/Assets/planeIconWhite.svg" alt="Icon 1" class="icon">
+                <p class="instruction-text">Encuentra una superficie para posicionar el departamento.</p>
+            </div>
+            <div class="instruction-item">
+                <img src="/Assets/pinch.svg" alt="Icon 2" class="icon">
+                <p class="instruction-text">Ajusta el tamaño del departamento.</p>
+            </div>
+            <div class="instruction-item">
+              <img src="/Assets/pasosIconWhite.svg" alt="Icon 3" class="icon">
+              <p class="instruction-text">Visualiza y camina alrededor para explorar.</p>
+          </div>
+        </div>
+        <model-viewer
+          src="/Assets/depa.glb"
+          ios-src="/Assets/depa.usdz"
+          poster="/Assets/depa.webp"
+          exposure=".8"
+          shadow-intensity="1"
+          shadow-softness="1"
+          loading="eager"
+          ar
+          ar-modes="scene-viewer webxr quick-look fallback"
+          ar-scale="auto"
+          quick-look-browsers="safari chrome"
+          camera-controls
+          auto-rotate
+          alt="Departamento en Realidad Aumentada"
+        >
+          <button
+            slot="ar-button"
+            id="ar-button"
+            onclick="document.getElementById('tr') .play();"
+          >
+            VER EN TU ESPACIO
+          </button>
+          <div id="progress" slot="progress-bar">
+            <div class="bar"></div>
+          </div>
+        </model-viewer>
+    </div>
+    <div class="login">
+      <div class="form-container">
+        <img
+          src="/Assets/qr1.webp"
+          alt="AR"
+          class="logo"
+        />
+        <h3 class="title">
+          Parece que estas en una computadora 🧐..<br />
+          <span class="destacadoEscanea">Escanea</span> el QR y ve en Realidad Aumentada.
+        </h3>
+        <p class="subtitle"></p>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer@v4.0.0/dist/model-viewer.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer@v4.0.0/dist/model-viewer-legacy.js"
+    ></script>
+    <script src="script.js"></script>
+</body>
+</html> 
